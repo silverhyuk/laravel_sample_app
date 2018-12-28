@@ -64,4 +64,10 @@ Route::group(['prefix' => 'system'], function () {
     });
 });
 
+Route::get('user/{id}', 'UserController@show');
+
 //php artisan route:list
+//Route::resource('post', 'PostController', ['only' => ['index', 'store', 'create', 'show', 'update', 'destroy', 'edit']]);
+
+//계층구조
+Route::resource('user.post', 'PostController', ['only' => ['index', 'store', 'create', 'show', 'update', 'destroy', 'edit']]);
