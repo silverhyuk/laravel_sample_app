@@ -71,3 +71,9 @@ Route::get('user/{id}', 'UserController@show');
 
 //계층구조
 Route::resource('user.post', 'PostController', ['only' => ['index', 'store', 'create', 'show', 'update', 'destroy', 'edit']]);
+
+//로그인 기능 활성화
+//php artisan make:auth
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
